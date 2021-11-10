@@ -37,7 +37,7 @@
                                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%"></div>
                                </div>
                                <div id="qbox-container">
-                                  <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate>
+                                  <form class="needs-validation" id="form-wrapper" name="form-wrapper" novalidate>
                                      <!-- STEPS HERE -->
                                              <div id="steps-container">
                                                 <div class="step container">

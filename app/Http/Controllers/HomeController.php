@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::where('user_id',Auth::user()->id)->paginate(20);
-        return view('home',['contacts'=>$contacts]);
+        // $contacts = Contact::where('user_id',Auth::user()->id)->paginate(20);
+        return view('home');
     }
 }
