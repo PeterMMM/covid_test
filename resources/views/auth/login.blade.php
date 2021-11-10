@@ -8,8 +8,8 @@
                 <div class="card-header">{{ __('Booking for Covid Test') }}</div>
 
                 <div class="card-body" style="text-align: center;">
-                    <a href="{{ url('auth/google') }}" class=" ml-auto mr-auto mt-4 mb-2 btn btn-lg btn-info">
-                        Start booking with your gmail
+                    <a href="{{ url('auth/google') }}" class=" ml-auto mr-auto mt-4 mb-2 btn btn-lg btn-info" style="color:#fff;">
+                        Start booking with your Gmail
                     </a>
                 </div>
             </div>
