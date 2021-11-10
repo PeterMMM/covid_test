@@ -21,15 +21,31 @@
                         </div>
                         <!-- CONTAINER -->
                         <div class="container d-flex align-items-center min-vh-100">
-                           <div class="row g-0 justify-content-center" style="width:720px;">
+                           <div class="row g-0 justify-content-center">
+                            <!-- TITLE -->
+                            <div class="col-lg-4 offset-lg-1 mx-0 px-0">
+                               <div id="title-container">
+                                  <img class="covid-image" src="{{ url('/img/covid-check.png')}}">
+                                  <h2>Start booking</h2>
+                                  <h3>Covid Test</h3>
+                                  <p>Booking for covid test.</p>
+                               </div>
+                            </div>
                               <!-- FORMS -->
-                            <div class="col-lg-10 mx-0 px-0">
+                            <div class="col-lg-7 mx-0 px-0">
                                <div class="progress">
                                   <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%"></div>
                                </div>
                                <div id="qbox-container">
                                   <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate>
                                      <!-- STEPS HERE -->
+                                    
+                                    <div class="col-lg-7 mx-0 px-0">
+                                       <div class="progress">
+                                          <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%"></div>
+                                       </div>
+                                       <div id="qbox-container">
+                                          <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate="">
                                              <div id="steps-container">
                                                 <div class="step">
                                                    <h4>Have you recently been in close contact with someone who has COVID-19?</h4>
