@@ -25,6 +25,8 @@ class AddGoogleId extends Migration
      */
     public function down()
     {
-        $table->dropColumn('google_id');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('google_id');
+        });
     }
 }

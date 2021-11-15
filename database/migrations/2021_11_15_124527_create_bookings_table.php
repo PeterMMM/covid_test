@@ -15,7 +15,7 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->tinyInteger('status_id')->default('0')->comment('0=>booking request, 1=>order confirm');
+            $table->tinyInteger('status_id')->nullable();
             $table->integer('field_id')->nullable();
             $table->timestamps();
         });

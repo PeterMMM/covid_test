@@ -17,7 +17,7 @@ class CreateFieldsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('address')->nullable();
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('mobile_number')->nullable();
             $table->integer('age')->nullable();
             $table->integer('gender')->comment('0=>male,1=>female,2=>other')->nullable();
@@ -34,8 +34,10 @@ class CreateFieldsTable extends Migration
             $table->string('cm_pcr_location')->nullable();
             $table->string('cm_antigen_location')->nullable();
             $table->string('pk_pcr_location')->nullable();
+            $table->string('pk_pcr_no_cer_location')->nullable();
             $table->string('pk_antigen_location')->nullable();
             $table->string('drive_through_pcr_test')->nullable();
+            $table->string('demand_location')->nullable();
             $table->string('car_detail')->nullable();
             $table->string('home_address')->nullable();
             $table->dateTime('app_date_time')->comment('app_date + app_time')->nullable();

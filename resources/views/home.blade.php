@@ -45,7 +45,8 @@
                                                    <h4>Provide us with your personal information:</h4>
                                                    <div class="mt-1">
                                                       <label class="form-label">Your Name:</label> 
-                                                      <input class="form-control" id="name" name="name" type="text" required>
+                                                      <input class="form-control" id="name" name="name" type="text" required value="{{ Auth::user()->name }}">
+                                                      <input style="display:none;" id="user_id" name="user_id" type="number" required value="{{ Auth::user()->id }}">
                                                    </div>
                                                    <div class="mt-2">
                                                       <label class="form-label">Your Address:</label> 
@@ -53,7 +54,7 @@
                                                    </div>
                                                    <div class="mt-2">
                                                       <label class="form-label">Your Email:</label> 
-                                                      <input class="form-control" id="email" name="email" type="email" required>
+                                                      <input class="form-control" id="email" name="email" type="email" required value="{{ Auth::user()->email }}"  readOnly="readOnly">
                                                    </div>
                                                    <div class="mt-2">
                                                       <label class="form-label">Your Mobile Number:</label> 
@@ -68,12 +69,12 @@
                                                       </div>
                                                       <div class="col-lg-8">
                                                          <div id="input-container">
-                                                            <input class="form-check-input" name="gender" type="radio" value="male"> 
+                                                            <input class="form-check-input" name="gender" type="radio" value="0"> 
                                                             <label class="form-check-label radio-lb">Male</label> 
-                                                            <input class="form-check-input" name="gender" type="radio" value="female"> 
+                                                            <input class="form-check-input" name="gender" type="radio" value="1"> 
                                                             <label class="form-check-label radio-lb">Female</label> 
-                                                            <input checked class="form-check-input" name="gender" type="radio" value="undefined"> 
-                                                            <label class="form-check-label radio-lb">Rather not say</label>
+                                                            <input checked class="form-check-input" name="gender" type="radio" value="2"> 
+                                                            <label class="form-check-label radio-lb">Other</label>
                                                          </div>
                                                       </div>
                                                    </div>
@@ -402,9 +403,9 @@
                                                 </div>
                                                 <div id="success">
                                                    <div class="mt-5">
-                                                      <h4>Success! We'll get back to you ASAP!</h4>
-                                                      <p>Meanwhile, clean your hands often, use soap and water, or an alcohol-based hand rub, maintain a safe distance from anyone who is coughing or sneezing and always wear a mask when physical distancing is not possible.</p>
-                                                      <a class="back-link" href="">Go back from the beginning ➜</a>
+                                                      <h4>Your covid test booking success! We'll confirm your booking and get back to you ASAP!</h4>
+                                                      <p>Thanks your booking at our services. We will send mail about your booking is confirm or reject. Meanwhile, clean your hands often, use soap and water, or an alcohol-based hand rub, maintain a safe distance from anyone who is coughing or sneezing and always wear a mask when physical distancing is not possible.</p>
+                                                      <a class="back-link" href="/">Go back from the beginning ➜</a>
                                                    </div>
                                                 </div>
                                              </div>
