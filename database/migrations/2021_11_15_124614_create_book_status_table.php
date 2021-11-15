@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddGoogleId extends Migration
+class CreateBookStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddGoogleId extends Migration
      */
     public function up()
     {
-        Schema::table('users', function ($table) {
-            $table->string('google_id')->nullable();
+        Schema::create('book_status', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +26,6 @@ class AddGoogleId extends Migration
      */
     public function down()
     {
-        $table->dropColumn('google_id')
+        Schema::dropIfExists('book_status');
     }
 }

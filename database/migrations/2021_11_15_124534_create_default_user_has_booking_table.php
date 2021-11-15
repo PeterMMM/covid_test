@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddGoogleId extends Migration
+class CreateDefaultUserHasBookingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddGoogleId extends Migration
      */
     public function up()
     {
-        Schema::table('users', function ($table) {
-            $table->string('google_id')->nullable();
+        Schema::create('default_user_has_booking', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('booking_id');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class AddGoogleId extends Migration
      */
     public function down()
     {
-        $table->dropColumn('google_id')
+        Schema::dropIfExists('default_user_has_booking');
     }
 }
