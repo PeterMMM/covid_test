@@ -25,6 +25,6 @@ class AddGoogleId extends Migration
      */
     public function down()
     {
-        $table->dropColumn('google_id')
+        $table->dropColumn('google_id');
     }
 }
