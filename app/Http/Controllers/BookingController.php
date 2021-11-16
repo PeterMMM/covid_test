@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Field;
 use App\Booking;
 use App\DefaultUserHasBooking;
+use DB;
+use Session;
 
 class BookingController extends Controller
 {
@@ -129,7 +131,7 @@ class BookingController extends Controller
 
         //insert into booking 
         $booking = new Booking;
-        $booking->status_id = 0;
+        $booking->status_id = 1;
         $booking->field_id = $field_id;
         $booking->save();
         $booking_id = $booking->id;
@@ -145,6 +147,21 @@ class BookingController extends Controller
             'message' => 'good',
             'data' => request()->all()
         ], 200);
+    }
+
+    public function bookingList()
+    {
+        if (!Session::get('admin_login')) {
+            return view('admin.login', ['error' => 'Login to access this page!']);
+        }
+
+        $bookings= DB::table('bookings')
+        ->select('bookings.id AS booking_id', 'book_status.name AS booking_status', 'fields.name AS booking_user_name','fields.email AS booking_user_email')
+        ->leftJoin('book_status','bookings.status_id','=','book_status.id')
+        ->leftJoin('fields','bookings.field_id','=','fields.id')
+        ->get();
+        // dd($bookings);
+        return view('admin.dashboard', ['bookings' => $bookings]);
     }
 
     /**

@@ -18,3 +18,19 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('auth/google', 'GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'GoogleController@handleGoogleCallback');
+
+Route::get('admin/login', function () {
+    return view('admin.login');
+});
+
+Route::get('admin/dashboard', 'BookingController@bookingList');
+
+Route::post('/admin/login', [
+    'uses' => 'AdminController@login',
+    'as' => 'admin.login',
+]);
+
+Route::get('/admin/logout', [
+    'uses' => 'AdminController@logout',
+    'as' => 'admin.logout',
+]);
