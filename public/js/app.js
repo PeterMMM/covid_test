@@ -37522,7 +37522,7 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#person_no').attr('id') + "']").show();
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").show();
-            $("#pcr_location").hide();
+            $("#pcr_location").show();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -38097,24 +38097,54 @@ prevBtn.addEventListener('click', () => {
 });
  
  
-submitBtn.addEventListener('click', () => {
-    preloader.classList.add('d-block');
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log("submit reach");
+  preloader.classList.add('d-block');
  
     const timer = ms => new Promise(res => setTimeout(res, ms));
- 
-    timer(3000)
-        .then(() => {
-            bodyElement.classList.add('loaded');
-        }).then(() => {
-            step[stepCount].classList.remove('d-block');
-            step[stepCount].classList.add('d-none');
-            prevBtn.classList.remove('d-inline-block');
-            prevBtn.classList.add('d-none');
-            submitBtn.classList.remove('d-inline-block');
-            submitBtn.classList.add('d-none');
-            succcessDiv.classList.remove('d-none');
-            succcessDiv.classList.add('d-block');
-        })
+    // Get form
+    var form = $('.booking-form')[0];
+
+    // FormData object 
+    var formData = new FormData(form);
+    
+    console.log(formData);
+    // Send data to api
+   $.ajax({
+      type: "POST",
+      enctype: 'multipart/form-data',
+      url: "api/booking/add",
+      data: formData,
+      dataType: "json",
+      processData: false,
+      contentType: false,
+      cache: false,
+      timeout: 800000,
+      success: function (data) {
+          
+          console.log("SUCCESS : ", data);
+
+          timer(3000)
+          .then(() => {
+              bodyElement.classList.add('loaded');
+          }).then(() => {
+              step[stepCount].classList.remove('d-block');
+              step[stepCount].classList.add('d-none');
+              prevBtn.classList.remove('d-inline-block');
+              prevBtn.classList.add('d-none');
+              submitBtn.classList.remove('d-inline-block');
+              submitBtn.classList.add('d-none');
+              succcessDiv.classList.remove('d-none');
+              succcessDiv.classList.add('d-block');
+          })
+      },
+      error: function (e) {
+          console.log("ERROR : ", e);
+      }
+  });
+
+
  
 });
 
@@ -38132,7 +38162,6 @@ var mm = today.getMonth(); //January is 0!
 var yyyy = today.getFullYear();
 if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = mm+'/'+dd+'/'+yyyy;
 $(function() {
-    
     $('#app_date').attr('value', getFormattedDate(dd, mm, yyyy));
 });
 

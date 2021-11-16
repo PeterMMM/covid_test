@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddGoogleId extends Migration
+class CreateBookingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddGoogleId extends Migration
      */
     public function up()
     {
-        Schema::table('users', function ($table) {
-            $table->string('google_id')->nullable();
+        Schema::create('bookings', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->tinyInteger('status_id')->nullable();
+            $table->integer('field_id')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddGoogleId extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('google_id');
-        });
+        Schema::dropIfExists('bookings');
     }
 }
