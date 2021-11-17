@@ -76,7 +76,7 @@ class BookingController extends Controller
             $field->test_location = $request->q_drive;
         }
         if(isset($request->pk_antigen_test_location)) {
-            $field->pk_antigen_test_location = $request->pk_antigen_test_location;
+            $field->pk_antigen_location = $request->pk_antigen_test_location;
         }
         if(isset($request->antigen_test_location)) {
             $field->antigen_test_location = $request->antigen_test_location;
