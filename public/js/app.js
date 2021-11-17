@@ -37427,6 +37427,9 @@ let preloader = document.getElementById('preloader-wrapper');
 let bodyElement = document.querySelector('body');
 let succcessDiv = document.getElementById('success');
 
+var qDocValue = $("input[name='q_doc']:checked").val();
+var selectTestValue = $("input[name='select_test']:checked").val();
+
 form.onsubmit = () => {
     return false
 }
@@ -37518,7 +37521,27 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#q_5_a').attr('id') + "']").show();
             $("label[for='" + $('#q_5_b').attr('id') + "']").show();
             $("label[for='" + $('#q_5_c').attr('id') + "']").show();
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+            $('#pk_antigen_test_location').hide();
             
+
             $("label[for='" + $('#person_no').attr('id') + "']").show();
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").show();
@@ -37542,6 +37565,9 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
             $("#pk_pcr_location").hide();
 
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
             $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
             $("#pk_pcr_no_cer_location").hide();
 
@@ -37553,7 +37579,10 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
-            
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
             $("#car_detail").hide();
             
             $("label[for='" + $('#demand_location').attr('id') + "']").hide();
@@ -37572,11 +37601,32 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#q_5_a').attr('id') + "']").show();
             $("label[for='" + $('#q_5_b').attr('id') + "']").show();
             $("label[for='" + $('#q_5_c').attr('id') + "']").hide();
-            
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
             $("label[for='" + $('#person_no').attr('id') + "']").show();
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").show();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37604,6 +37654,8 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
             $("#anti_test_location").hide();
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
             
             $("#car_detail").hide();
             
@@ -37618,16 +37670,56 @@ nextBtn.addEventListener('click', () => {
             $("#add_info").show();
           }else if (selectTestValue == 'st3' && qLocationRadioValue == 'bk') {
             console.log("st3 and bk");
+
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").show();
+            $("#anti_test_location").show();
+
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("#car_detail").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+
             $("label[for='" + $('#q_4_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_4_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_c').attr('id') + "']").hide();
             
-            $("label[for='" + $('#person_no').attr('id') + "']").show();
-            
-            $("label[for='" + $('#pcr_location').attr('id') + "']").show();
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+            
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37653,23 +37745,11 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
             $("#drive_through_pcr_test").hide();
 
-            $("label[for='" + $('#anti_test_location').attr('id') + "']").show();
-            $("#anti_test_location").show();
-
-            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
-            $("#antigen_test_location").show();
-            
-            $("#car_detail").hide();
-            
             $("label[for='" + $('#demand_location').attr('id') + "']").hide();
             $("#demand_location").hide();
 
             $("#home_address").hide();
             
-            $("label[for='" + $('#app_date').attr('id') + "']").show();
-            $("#app_date").show();
-            $("#app_time").show();
-            $("#add_info").show();
           }else if (selectTestValue == 'st1' && qLocationRadioValue == 'pk') {
             console.log("st1 and pk");
             $("label[for='" + $('#q_4_a').attr('id') + "']").show();
@@ -37677,11 +37757,33 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_c').attr('id') + "']").hide();
-            
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+
             $("label[for='" + $('#person_no').attr('id') + "']").show();
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37712,6 +37814,10 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
+            
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+            
             
             $("#car_detail").hide();
             
@@ -37731,11 +37837,39 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_c').attr('id') + "']").hide();
+
+            $('#dob').show();
+            $('#nationality').show();
+            $('#passport').show();
+            $('#hotel').show();
+            $('#arrivalnumber').show();
+            $('#arrivaldate').show();
+            $('#arrivaltime').show();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").show();
+            $('#pk_antigen_test_location').show();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
             
+            $("label[for='" + $('#demand_location').attr('id') + "']").show();
+            $("#demand_location").show();
+
             $("label[for='" + $('#person_no').attr('id') + "']").show();
             
+
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37758,13 +37892,13 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
             $("#anti_test_location").hide();
 
-            $("label[for='" + $('#antigen_test_location').attr('id') + "']").show();
-            $("#antigen_test_location").show();
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
             
             $("#car_detail").hide();
-            
-            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
-            $("#demand_location").hide();
 
             $("#home_address").hide();
             
@@ -37774,6 +37908,25 @@ nextBtn.addEventListener('click', () => {
             $("#add_info").show();
           }else if (selectTestValue == 'st1' && qLocationRadioValue == 'ks') {
             console.log("st1 and ks");
+
+            $("label[for='" + $('#dob').attr('id') + "']").show();
+            $('#dob').show();
+            $("label[for='" + $('#nationality').attr('id') + "']").show();
+            $('#nationality').show();
+            $("label[for='" + $('#passport').attr('id') + "']").show();
+            $('#passport').show();
+            $("label[for='" + $('#hotel').attr('id') + "']").show();
+            $('#hotel').show();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").show();
+            $('#arrivalnumber').show();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").show();
+            $('#arrivaldate').show();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").show();
+            $('#arrivaltime').show();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
             $("label[for='" + $('#q_4_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_4_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
@@ -37782,8 +37935,14 @@ nextBtn.addEventListener('click', () => {
             
             $("label[for='" + $('#person_no').attr('id') + "']").show();
             
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37814,13 +37973,16 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
             
             $("#car_detail").hide();
             
-            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
-            $("#demand_location").hide();
+            $("label[for='" + $('#demand_location').attr('id') + "']").show();
+            $("#demand_location").show();
 
-            $("#home_address").hide();
+            $("#home_address").show();
             
             $("label[for='" + $('#app_date').attr('id') + "']").show();
             $("#app_date").show();
@@ -37828,6 +37990,25 @@ nextBtn.addEventListener('click', () => {
             $("#add_info").show();
           }else if (selectTestValue == 'st4' && qLocationRadioValue == 'cm') {
             console.log("st4 and cm");
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
             $("label[for='" + $('#q_4_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_4_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
@@ -37838,6 +38019,9 @@ nextBtn.addEventListener('click', () => {
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37868,6 +38052,9 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
             
             $("#car_detail").hide();
             
@@ -37882,6 +38069,28 @@ nextBtn.addEventListener('click', () => {
             $("#add_info").show();
           }else if (selectTestValue == 'st2' && qLocationRadioValue == 'cm') {
             console.log("st2 and cm");
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
             $("label[for='" + $('#q_4_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_4_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
@@ -37892,6 +38101,9 @@ nextBtn.addEventListener('click', () => {
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
             
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
@@ -37922,6 +38134,9 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
             
             $("#car_detail").hide();
             
@@ -37936,6 +38151,28 @@ nextBtn.addEventListener('click', () => {
             $("#add_info").show();
           }else if (selectTestValue == 'st4' && qLocationRadioValue == 'cb') {
             console.log("st4 and cb");
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
             $("label[for='" + $('#q_4_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_4_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
@@ -37946,6 +38183,9 @@ nextBtn.addEventListener('click', () => {
             
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
 
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").show();
             $("#cb_pcr_location").show();
@@ -37976,6 +38216,9 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
             
             $("#car_detail").hide();
             
@@ -37990,6 +38233,28 @@ nextBtn.addEventListener('click', () => {
             $("#add_info").show();
           }else if (selectTestValue == 'st2' && qLocationRadioValue == 'cb') {
             console.log("st2 and cb");
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
             $("label[for='" + $('#q_4_a').attr('id') + "']").hide();
             $("label[for='" + $('#q_4_b').attr('id') + "']").hide();
             $("label[for='" + $('#q_5_a').attr('id') + "']").hide();
@@ -38001,6 +38266,9 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
             $("#pcr_location").hide();
 
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
             $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
             $("#cb_pcr_location").hide();
 
@@ -38010,8 +38278,8 @@ nextBtn.addEventListener('click', () => {
             $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
             $("#cm_pcr_location").hide();
 
-            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").show();
-            $("#cm_antigen_location").show();
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
 
             $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
             $("#ks_pcr_location").hide();
@@ -38030,6 +38298,9 @@ nextBtn.addEventListener('click', () => {
 
             $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
             $("#antigen_test_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
             
             $("#car_detail").hide();
             
@@ -38069,6 +38340,811 @@ nextBtn.addEventListener('click', () => {
 });
  
  
+/*For test location*/
+    $("input[name='q_drive']" ).change(function() {
+        var qDriveValue = $("input[name='q_drive']:checked").val();
+        var qLocationRadioValue = $("input[name='q_location']:checked").val();
+        var selectTestValue = $("input[name='select_test']:checked").val();
+        var qDocValue = $("input[name='q_doc']:checked").val();
+        
+        console.log("change happen "+qDriveValue+'current_step '+current_step +' selectTestValue '+selectTestValue+' qLocationRadioValue '+qLocationRadioValue+' qDocValue '+qDocValue);
+        if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'bk' && qDocValue == 'a' && qDriveValue == 'a') {
+          console.log("bk - st1 - doc a - drive a");
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+            
+            $("label[for='" + $('#pcr_location').attr('id') + "']").show();
+            $("#pcr_location").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+            
+            $("#car_detail").hide();
+            
+            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
+            $("#demand_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+
+            $("#home_address").hide();
+        }else if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'bk' && qDocValue == 'a' && qDriveValue == 'b') {
+          console.log("bk - st1 - doc a - drive b");
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").show();
+            $("#drive_through_pcr_test").show();
+
+            $("#car_detail").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+            
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
+            $("#demand_location").hide();
+            
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+
+            $("#home_address").hide();
+        }else if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'bk' && qDocValue ==  'a' && qDriveValue == 'c') {
+          console.log("bk - st1 - doc a - drive c");
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("#home_address").show();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").show();
+            $("#demand_location").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+            
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+            
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+            
+            $("#car_detail").hide();
+        }else if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'bk' && qDocValue ==  'b' && qDriveValue == 'a') {
+          console.log("bk - st1 - doc b - drive a");
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").show();
+            $("#pcr_location_b").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+
+            $("#home_address").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
+            $("#demand_location").hide();
+            
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+
+            $("#car_detail").hide();
+        }else if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'bk' && qDocValue ==  'b' && qDriveValue == 'b') {
+          console.log("bk - st1 - doc b - drive b");
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").show();
+            $("#drive_through_pcr_test").show();
+
+            $("#car_detail").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+
+            $("#home_address").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
+            $("#demand_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+        }else if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'bk' && qDocValue ==  'b' && qDriveValue == 'c') {
+          console.log("bk - st1 - doc b - drive c");
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").show(); //let it be wrong label pls
+            $("#demand_location").show();
+
+            $("#home_address").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+
+            $("#car_detail").hide();
+        }else if (current_step == 3 && selectTestValue == 'st2' && qLocationRadioValue == 'bk' && qDriveValue == 'a') {
+          console.log("bk - st2 - drive a");
+          // st 2 
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").show();
+            $("#antigen_test_location").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+            
+            $("#car_detail").hide();
+            
+            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
+            $("#demand_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("#home_address").hide();
+        }else if (current_step == 3 && selectTestValue == 'st2' && qLocationRadioValue == 'bk' && qDriveValue == 'b') {
+          console.log("bk - st2 - drive b");
+          // st 2 
+            console.log("drive "+qDriveValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").show();
+            $("#test_location").show();
+            
+            $("#car_detail").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+
+
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+            
+            
+            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
+            $("#demand_location").hide();
+
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("#home_address").hide();
+        }
+    });
+
+
+    $("input[name='q_doc']" ).change(function() {
+        var qDocValue = $("input[name='q_doc']:checked").val();
+        var qLocationRadioValue = $("input[name='q_location']:checked").val();
+        var selectTestValue = $("input[name='select_test']:checked").val();
+
+        console.log("change happen qDocValue "+qDocValue);
+        if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'pk' && qDocValue == 'a') {
+          console.log("pk - st1 - doc a");
+            console.log("doc "+qDocValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").show();
+            $("#pk_pcr_location").show();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").show();
+            $("#demand_location").show();
+            $("#home_address").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+
+            $('#dob').show();
+            $('#nationality').show();
+            $('#passport').show();
+            $('#hotel').show();
+            $('#arrivalnumber').show();
+            $('#arrivaldate').show();
+            $('#arrivaltime').show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
+            $("#pk_pcr_no_cer_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+            
+            $("#car_detail").hide();
+            
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+        }else if (current_step == 3 && selectTestValue == 'st1' && qLocationRadioValue == 'pk' && qDocValue == 'b') {
+          console.log("pk - st1 - doc b");
+            console.log("doc "+qDocValue);
+            
+            $("label[for='" + $('#person_no').attr('id') + "']").show();
+            $('#person_no').show();
+
+            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").show();
+            $("#pk_pcr_no_cer_location").show();
+
+            $("label[for='" + $('#demand_location').attr('id') + "']").show();
+            $("#demand_location").show();
+            $("#home_address").show();
+
+            $("label[for='" + $('#app_date').attr('id') + "']").show();
+            $("#app_date").show();
+            $("#app_time").show();
+            $("#add_info").show();
+
+            $('#dob').show();
+            $('#nationality').show();
+            $('#passport').show();
+            $('#hotel').show();
+            $('#arrivalnumber').show();
+            $('#arrivaldate').show();
+            $('#arrivaltime').show();
+            // ---------------------------------------------------------------
+
+            $("label[for='" + $('#dob').attr('id') + "']").hide();
+            $('#dob').hide();
+            $("label[for='" + $('#nationality').attr('id') + "']").hide();
+            $('#nationality').hide();
+            $("label[for='" + $('#passport').attr('id') + "']").hide();
+            $('#passport').hide();
+            $("label[for='" + $('#hotel').attr('id') + "']").hide();
+            $('#hotel').hide();
+            $("label[for='" + $('#arrivalnumber').attr('id') + "']").hide();
+            $('#arrivalnumber').hide();
+            $("label[for='" + $('#arrivaldate').attr('id') + "']").hide();
+            $('#arrivaldate').hide();
+            $("label[for='" + $('#arrivaltime').attr('id') + "']").hide();
+            $('#arrivaltime').hide();
+
+            $("label[for='" + $('#pk_antigen_test_location').attr('id') + "']").hide();
+            $("#pk_antigen_test_location").hide();
+
+            $("label[for='" + $('#cb_pcr_location').attr('id') + "']").hide();
+            $("#cb_pcr_location").hide();
+
+            $("label[for='" + $('#cb_antigen_location').attr('id') + "']").hide();
+            $("#cb_antigen_location").hide();
+
+            $("label[for='" + $('#cm_pcr_location').attr('id') + "']").hide();
+            $("#cm_pcr_location").hide();
+
+            $("label[for='" + $('#cm_antigen_location').attr('id') + "']").hide();
+            $("#cm_antigen_location").hide();
+
+            $("label[for='" + $('#ks_pcr_location').attr('id') + "']").hide();
+            $("#ks_pcr_location").hide();
+
+            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
+            $("#pk_pcr_location").hide();
+
+            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
+            $("#pcr_location").hide();
+
+            $("label[for='" + $('#test_location').attr('id') + "']").hide();
+            $("#test_location").hide();
+
+            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
+            $("#drive_through_pcr_test").hide();
+            
+            $("#car_detail").hide();
+            
+            $("label[for='" + $('#pcr_location_b').attr('id') + "']").hide();
+            $("#pcr_location_b").hide();
+
+            $("label[for='" + $('#anti_test_location').attr('id') + "']").hide();
+            $("#anti_test_location").hide();
+
+            $("label[for='" + $('#antigen_test_location').attr('id') + "']").hide();
+            $("#antigen_test_location").hide();
+        }
+    });
+
+
 prevBtn.addEventListener('click', () => {
     if (current_step > 0) {
         current_step--;

@@ -41,7 +41,7 @@
                                                 <td>{{$book->booking_status}}</td>
                                                 <td>{{$book->booking_user_name}}</td>
                                                 <td>{{$book->booking_user_email}}</td>
-                                                <td><a href="#">Detail</a></td>
+                                                <td><a href="{{route('admin.booking.detail',$book->booking_id)}}">Detail</a></td>
                                                 <td><a href="#">Action</a></td>
                                               </tr>
                                              @endforeach
