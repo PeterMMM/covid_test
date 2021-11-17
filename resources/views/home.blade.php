@@ -173,14 +173,43 @@
                                                     <!-- For antigen test location-->
                                                     <div class="mt-1">
                                                       <div class="form-group">
+                                                        <label for="test_location">Select Test Location </label>
+                                                        <select class="form-control" id="test_location" name="test_location">
+                                                          <option disabled selected value> -- select an option -- </option>
+                                                          <option value="1">Latphrao 130, Bangkapi Center.......</option>
+                                                        </select>
+                                                      </div>
+                                                   </div>
+                                                    <!--End antigen test location -->
+
+                                                    <!-- For antigen test location-->
+                                                    <div class="mt-1">
+                                                      <div class="form-group">
                                                         <label for="antigen_test_location">Select Antigen Test Location </label>
                                                         <select class="form-control" id="antigen_test_location" name="antigen_test_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Latphrao 130, bakgkapai ..................................  </option>
+                                                          <option value="2">Sukhumvit 48,.............................................  </option>
+                                                          <option value="3">Soi Chat San, ............................................  </option>
+                                                          <option value="4">(PRE-PAY) Sukhumvit 49.................................... </option>
+                                                          <option value="5">(PRE-PAY) Sukhumvit 49(Without Certificate................ </option>
+                                                          <option value="6">(PRE-PAY) Sukhumvit 1 Road,............................... </option>
+                                                        </select>
+                                                      </div>
+                                                   </div>
+                                                    <!--End antigen test location -->
+                                                    <!-- For antigen test location-->
+                                                    <div class="mt-1">
+                                                      <div class="form-group">
+                                                        <label for="pk_antigen_test_location">Select Phuket Antigen Test Location </label>
+                                                        <select class="form-control" id="pk_antigen_test_location" name="pk_antigen_test_location">
+                                                          <option disabled selected value> -- select an option -- </option>
+                                                          <option value="1">Latphrao 130, bakgkapai ..................................  </option>
+                                                          <option value="2">Sukhumvit 48,.............................................  </option>
+                                                          <option value="3">Soi Chat San, ............................................  </option>
+                                                          <option value="4">(PRE-PAY) Sukhumvit 49.................................... </option>
+                                                          <option value="5">(PRE-PAY) Sukhumvit 49(Without Certificate................ </option>
+                                                          <option value="6">(PRE-PAY) Sukhumvit 1 Road,............................... </option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -192,11 +221,12 @@
                                                         <label for="anti_test_location">Select Antibody Test Location </label>
                                                         <select class="form-control" id="anti_test_location" name="anti_test_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Lahrao 130,....................................</option>
+                                                          <option value="2">Soi Chat Sn, Huai..............................</option>
+                                                          <option value="3">Sukhumvi 48,............1200THB.................</option>
+                                                          <option value="3">Sukhumvi 48,............24000THB.................</option>
+                                                          <option value="4">The Racquet Club,.......1300 THB.................</option>
+                                                          <option value="5">The Racquet Club,.......2300 THB.................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -213,11 +243,24 @@
                                                         <label for="pcr_location">Select PCR Test Location </label>
                                                         <select class="form-control" id="pcr_location" name="pcr_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Latphrao 130, Bangkapi Center,.............................</option>
+                                                          <option value="2">Sukhumvit 48,..............................................</option>
+                                                          <option value="3">(PRE-PAY) 3HOURS EXPRESS PCR RESULT WITH .CERT.. At Phahony ..</option>
+                                                          <option value="4">(PRE-PAY)Sukhumvit 49 Center............................. ..</option>
+                                                          <option value="5">(PRE-PAY)Phuthamonthon Saii  1Road........................ ..</option>
+                                                          <option value="6">(PRE-PAY)6HOURS RESULT at Phutthamonth Sai................ ..</option>
+                                                          <option value="7">(PRE-PAY)Certi with QR, Sukhumvit 49      ................ ..</option>
+                                                        </select>
+                                                      </div>
+                                                   </div>
+                                                    <div class="mt-1">
+                                                      <div class="form-group">
+                                                        <label for="pcr_location_b">Select PCR Test Location </label>
+                                                        <select class="form-control" id="pcr_location_b" name="pcr_location">
+                                                          <option disabled selected value> -- select an option -- </option>
+                                                          <option value="8">Soi Chat San,.......................................       </option>
+                                                          <option value="2">Sukhumvit 48,..............................................</option>
+                                                          <option value="3">(PRE-PAY) 3HOURS EXPRESS PCR RESULT WITH .CERT.. At Phahony</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -229,11 +272,7 @@
                                                         <label for="cb_pcr_location">Select Chonburi PCR Test Location </label>
                                                         <select class="form-control" id="cb_pcr_location" name="cb_pcr_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Soi Huayakapi 3, Sukhu.......................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -245,11 +284,7 @@
                                                         <label for="cb_antigen_location">Select Chonburi Antigen Test Location </label>
                                                         <select class="form-control" id="cb_antigen_location" name="cb_antigen_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Soi Huaykapi 3, Sukhumvit Road................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -261,11 +296,7 @@
                                                         <label for="cm_pcr_location">Select Chiang Mai PCR Test Location </label>
                                                         <select class="form-control" id="cm_pcr_location" name="cm_pcr_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Kotchasam Road, Tambon Chang..............</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -277,11 +308,7 @@
                                                         <label for="cm_antigen_location">Select Chiang Mai Antigen Test Location </label>
                                                         <select class="form-control" id="cm_antigen_location" name="cm_antigen_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Kotchasam Road, Tambon........................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -293,11 +320,8 @@
                                                         <label for="pk_pcr_location">Select Phuket PCR Test with Certificate Location </label>
                                                         <select class="form-control" id="pk_pcr_location" name="pk_pcr_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Chaofah East Rd, Vic.........................</option>
+                                                          <option value="2">Test at Phuket Airport.........................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -309,11 +333,9 @@
                                                         <label for="ks_pcr_location">Select Koh Samui PCR Test Location(Pre-payment Needed) </label>
                                                         <select class="form-control" id="ks_pcr_location" name="ks_pcr_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Within Bangkok and Surrouonding Area...............</option>
+                                                          <option value="2">within Nonthaburi, Pathumthani.....................</option>
+                                                          <option value="3">EXPRESS 3 HOURS RESULT -  7500  THB</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -325,11 +347,8 @@
                                                         <label for="pk_pcr_no_cer_location">Select Phuket PCR Test without Certificate Location </label>
                                                         <select class="form-control" id="pk_pcr_no_cer_location" name="pk_pcr_no_cer_location">
                                                           <option disabled selected value> -- select an option -- </option>
-                                                          <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1, </option>
-                                                          <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2, </option>
-                                                          <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3, </option>
-                                                          <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit 4, </option>
-                                                          <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit 5, </option>
+                                                          <option value="1">Chaofah East Rd............................................</option>
+                                                          <option value="2">Test at Phuket ............................................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -340,11 +359,8 @@
                                                           <div class="form-group">
                                                             <label for="drive_through_pcr_test">Select Drive-through PCR Test Location </label>
                                                             <select class="form-control" id="drive_through_pcr_test" name="drive_through_pcr_test">
-                                                              <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
+                                                              <option value="1">Latphrao 130, Bangkapi Center............................ </option>
+                                                              <option value="2">(WITH JAPANESE FORM) Latphrao 130........................ </option>
                                                             </select>
                                                           </div>
                                                        </div>
@@ -359,11 +375,9 @@
                                                           <div class="form-group">
                                                             <label for="demand_location">Select On-Demand Location PCR Test with Certificate Details and Rate (Pre-payment Needed)</label>
                                                             <select class="form-control" id="demand_location" name="demand_location">
-                                                              <option value="1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
-                                                              <option value="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, </option>
+                                                              <option value="1">Within Bangkok and Surrounding Aras - 5..... </option>
+                                                              <option value="2">Within Nonthaburi, Pathumthani............... </option>
+                                                              <option value="3">EXPRESS # HOURS RESULT ...................... </option>
                                                             </select>
                                                           </div>
                                                        </div>
@@ -379,6 +393,49 @@
                                                        </div>
                                                        <div class="mt-1">
                                                           <textarea class="form-control" id="add_info" name="add_info" placeholder="Additional namelist, information or request"></textarea>
+                                                       </div>
+
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="dob">Date of Birth</label>
+                                                            <input class="form-control" id="dob" name="dob" type="date" placeholder="Date of Birth">
+                                                          </div>
+                                                       </div>
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="nationality">Nationality</label>
+                                                            <input class="form-control" id="nationality" name="nationality" type="text" placeholder="Nationality">
+                                                          </div>
+                                                       </div>
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="passport">Passport Number</label>
+                                                            <input class="form-control" id="passport" name="passport" type="text" placeholder="Passport Number">
+                                                          </div>
+                                                       </div>
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="hotel">Hotel Name</label>
+                                                            <input class="form-control" id="hotel" name="hotel" type="text" placeholder="Hotel Name">
+                                                          </div>
+                                                       </div>
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="arrivalnumber">Flight Arrival Number</label>
+                                                            <input class="form-control" id="arrivalnumber" name="arrivalnumber" type="text" placeholder="Flight Arrival Number">
+                                                          </div>
+                                                       </div>
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="arrivaldate">Arrival Date</label>
+                                                            <input class="form-control" id="arrivaldate" name="arrivaldate" type="date" placeholder="Arrival Date">
+                                                          </div>
+                                                       </div>
+                                                      <div class="mt-1">
+                                                          <div class="form-group">
+                                                            <label for="arrivaltime">Arrival Time</label>
+                                                            <input class="form-control" id="arrivaltime" name="arrivaltime" type="time" placeholder="Arrival Time">
+                                                          </div>
                                                        </div>
 
                                                 </div>
@@ -491,134 +548,7 @@
     });
 
 
-    $("input[name='q_doc']" ).change(function() {
-        var qDocValue = $("input[name='q_doc']:checked").val();
-        console.log("change happen qDocValue "+qDocValue);
-        if (qDocValue == 'a') {
-            console.log("qDocValue "+qDocValue);
-            
-            $("label[for='" + $('#person_no').attr('id') + "']").show();
-            
-            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
-            $("#pcr_location").hide();
-            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").show();
-            $("#pk_pcr_location").show();
-            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").hide();
-            $("#pk_pcr_no_cer_location").hide();
 
-            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
-            $("#drive_through_pcr_test").hide();
-            
-            $("#car_detail").hide();
-            
-            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
-            $("#demand_location").hide();
 
-            $("#home_address").hide();
-            
-            $("label[for='" + $('#app_date').attr('id') + "']").show();
-            $("#app_date").show();
-            $("#app_time").show();
-            $("#add_info").show();
-        }else if (qDocValue == 'b') {
-            console.log("qDocValue "+qDocValue);
-            $("label[for='" + $('#person_no').attr('id') + "']").show();
-            
-            $("label[for='" + $('#pcr_location').attr('id') + "']").hide();
-            $("#pcr_location").hide();
-            $("label[for='" + $('#pk_pcr_location').attr('id') + "']").hide();
-            $("#pk_pcr_location").hide();
-            $("label[for='" + $('#pk_pcr_no_cer_location').attr('id') + "']").show();
-            $("#pk_pcr_no_cer_location").show();
-
-            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
-            $("#drive_through_pcr_test").hide();
-
-            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
-            $("#drive_through_pcr_test").hide();
-            
-            $("#car_detail").hide();
-            
-            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
-            $("#demand_location").hide();
-
-            $("#home_address").hide();
-            
-            $("label[for='" + $('#app_date').attr('id') + "']").show();
-            $("#app_date").show();
-            $("#app_time").show();
-            $("#add_info").show();
-
-        }
-    });
-
-    $("input[name='q_drive']" ).change(function() {
-        var qDriveValue = $("input[name='q_drive']:checked").val();
-        console.log("change happen "+qDriveValue);
-        if (qDriveValue == 'a') {
-            console.log("drive "+qDriveValue);
-            
-            $("label[for='" + $('#person_no').attr('id') + "']").show();
-            
-            $("label[for='" + $('#pcr_location').attr('id') + "']").show();
-
-            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
-            $("#drive_through_pcr_test").hide();
-            
-            $("#car_detail").hide();
-            
-            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
-            $("#demand_location").hide();
-
-            $("#home_address").hide();
-            
-            $("label[for='" + $('#app_date').attr('id') + "']").show();
-            $("#app_date").show();
-            $("#app_time").show();
-            $("#add_info").show();
-        }else if (qDriveValue == 'b') {
-            console.log("drive "+qDriveValue);
-            $("label[for='" + $('#person_no').attr('id') + "']").show();
-            
-            $("label[for='" + $('#pcr_location').attr('id') + "']").show();
-
-            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
-            $("#drive_through_pcr_test").hide();
-            
-            $("#car_detail").show();
-            
-            $("label[for='" + $('#demand_location').attr('id') + "']").hide();
-            $("#demand_location").hide();
-
-            $("#home_address").hide();
-            
-            $("label[for='" + $('#app_date').attr('id') + "']").show();
-            $("#app_date").show();
-            $("#app_time").show();
-            $("#add_info").show();
-
-        }else if (qDriveValue == 'c') {
-            console.log("drive "+qDriveValue);
-            $("label[for='" + $('#person_no').attr('id') + "']").show();
-            
-            $("label[for='" + $('#pcr_location').attr('id') + "']").show();
-
-            $("label[for='" + $('#drive_through_pcr_test').attr('id') + "']").hide();
-            $("#drive_through_pcr_test").hide();
-            
-            $("#car_detail").hide();
-            
-            $("label[for='" + $('#demand_location').attr('id') + "']").show();
-            $("#demand_location").show();
-
-            $("#home_address").hide();
-            
-            $("label[for='" + $('#app_date').attr('id') + "']").show();
-            $("#app_date").show();
-            $("#app_time").show();
-            $("#add_info").show();
-            
-        }
-    });
 </script>
 @endpush

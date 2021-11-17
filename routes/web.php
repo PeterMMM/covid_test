@@ -34,3 +34,8 @@ Route::get('/admin/logout', [
     'uses' => 'AdminController@logout',
     'as' => 'admin.logout',
 ]);
+
+Route::get('/admin/booking/{id}', [
+    'uses' => 'AdminController@bookingDetail',
+    'as'   => 'admin.booking.detail',
+]);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use Session;
+use DB;
 class AdminController extends Controller
 {
     public function login(Request $request)
@@ -30,5 +31,27 @@ class AdminController extends Controller
     {
         session()->forget('admin_login');
         return view('admin.login');
+    }
+
+
+    /*
+    * Booking Detail Page
+    */
+
+    public function bookingDetail($id)
+    {
+
+        if (!Session::get('admin_login')) {
+            return view('admin.login', ['error' => 'Login to access this page!']);
+        }
+
+        $booking = DB::table('bookings')
+        ->select('bookings.id AS booking_id', 'book_status.name AS booking_status', 'fields.*')
+        ->leftJoin('book_status','bookings.status_id','=','book_status.id')
+        ->leftJoin('fields','bookings.field_id','=','fields.id')
+        ->where('bookings.id',$id)
+        ->first();
+        // dd($booking);
+        return view('admin.booking.detail', ['booking' => $booking]);
     }
 }

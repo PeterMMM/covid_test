@@ -12,6 +12,7 @@ use Session;
 
 class BookingController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -74,6 +75,9 @@ class BookingController extends Controller
         if(isset($request->q_drive)) {
             $field->test_location = $request->q_drive;
         }
+        if(isset($request->pk_antigen_test_location)) {
+            $field->pk_antigen_test_location = $request->pk_antigen_test_location;
+        }
         if(isset($request->antigen_test_location)) {
             $field->antigen_test_location = $request->antigen_test_location;
         }
@@ -124,6 +128,25 @@ class BookingController extends Controller
         }
         if(isset($request->add_info)) {
             $field->add_info = $request->add_info;
+        }
+
+        if(isset($request->dob)) {
+            $field->dob = $request->dob;
+        }
+        if(isset($request->nationality)) {
+            $field->nationality = $request->nationality;
+        }
+        if(isset($request->passport)) {
+            $field->passport = $request->passport;
+        }
+        if(isset($request->hotel)) {
+            $field->hotel = $request->hotel;
+        }
+        if(isset($request->arrivalnumber)) {
+            $field->arrivalnumber = $request->arrivalnumber;
+        }
+        if(isset($request->arrivaldate) && isset($request->arrivaltime)) {
+            $field->arrival_date_time = $request->arrivaldate.' '.$request->arrivaltime;
         }
         $field->save();
 
