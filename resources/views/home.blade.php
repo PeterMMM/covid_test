@@ -224,9 +224,9 @@
                                                           <option value="1">Lahrao 130,....................................</option>
                                                           <option value="2">Soi Chat Sn, Huai..............................</option>
                                                           <option value="3">Sukhumvi 48,............1200THB.................</option>
-                                                          <option value="3">Sukhumvi 48,............24000THB.................</option>
-                                                          <option value="4">The Racquet Club,.......1300 THB.................</option>
-                                                          <option value="5">The Racquet Club,.......2300 THB.................</option>
+                                                          <option value="4">Sukhumvi 48,............24000THB.................</option>
+                                                          <option value="5">The Racquet Club,.......1300 THB.................</option>
+                                                          <option value="6">The Racquet Club,.......2300 THB.................</option>
                                                         </select>
                                                       </div>
                                                    </div>
@@ -334,7 +334,7 @@
                                                         <select class="form-control" id="ks_pcr_location" name="ks_pcr_location">
                                                           <option disabled selected value> -- select an option -- </option>
                                                           <option value="1">Within Bangkok and Surrouonding Area...............</option>
-                                                          <option value="2">within Nonthaburi, Pathumthani.....................</option>
+                                                          <option value="2">Within Nonthaburi, Pathumthani.....................</option>
                                                           <option value="3">EXPRESS 3 HOURS RESULT -  7500  THB</option>
                                                         </select>
                                                       </div>
