@@ -166,7 +166,7 @@
                                                 <td>
                                                     {{$booking->antigen_test_location}}
                                                     @if($booking->antigen_test_location == 1)
-                                                        Latphrao 130, bakgkapai ..................................
+                                                        Latphrao 130, bakgkapai ....................
                                                     @elseif($booking->antigen_test_location == 2)
                                                         Sukhumvit 48,................................
                                                     @elseif($booking->antigen_test_location == 3)
@@ -366,7 +366,7 @@
                                               @endif
                                               @if(!empty($booking->home_address))
                                               <tr class="odd gradeX">
-                                                <td>Cart Detail</td>
+                                                <td>Home, Hotel, Office Address</td>
                                                 <td>
                                                     {{$booking->home_address}}
                                                 </td>
