@@ -39,3 +39,8 @@ Route::get('/admin/booking/{id}', [
     'uses' => 'AdminController@bookingDetail',
     'as'   => 'admin.booking.detail',
 ]);
+
+Route::get('booking/status/update/{booking_id}/{status_id}', [
+    'uses' => 'BookingController@statusUpdate',
+    'as'   => 'booking.status.update',
+]);

@@ -42,7 +42,11 @@
                                                 <td>{{$book->booking_user_name}}</td>
                                                 <td>{{$book->booking_user_email}}</td>
                                                 <td><a href="{{route('admin.booking.detail',$book->booking_id)}}">Detail</a></td>
-                                                <td><a href="#">Action</a></td>
+                                                <td>
+                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/1')}}" class="btn btn-info">Pending</a>
+                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/2')}}" class="btn btn-danger">Reject</a>
+                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/3')}}" class="btn btn-success">Confirm</a>
+                                                </td>
                                               </tr>
                                              @endforeach
                                             </tbody>
@@ -73,5 +77,8 @@
 
 @push('scripts')
 <script>
+function updateStatus(id, status){
+    console.log('form'+id+' '+status);
+};
 </script>
 @endpush
