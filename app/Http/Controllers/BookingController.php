@@ -33,6 +33,31 @@ class BookingController extends Controller
         
     }
 
+    public function statusUpdate($booking_id,$status_id,$screen)
+    {
+        if (!Session::get('admin_login')) {
+            return view('admin.login', ['error' => 'Login to access this page!']);
+        }
+        // dd($request);
+        $booking_id = $booking_id;
+        $status_id  = $status_id;
+        $screen     = $screen;
+        try {
+            $booking = Booking::find($booking_id);
+            $booking->status_id = $status_id;
+            $booking->save();
+            if (isset($booking->id)) {
+                if ($screen == 'd') {
+                    return redirect('admin/dashboard/');
+                }elseif ($screen == 'm') {
+                    return redirect('admin/booking/'.$booking_id);
+                }
+            }
+        } catch (\Illuminate\Database\QueryException $e) {
+            return view('admin.dashboard', ['message' => 'Fail to update booking status','status'=>'fail']);
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *

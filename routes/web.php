@@ -25,6 +25,8 @@ Route::get('admin', function () {
 
 Route::get('admin/dashboard', 'BookingController@bookingList');
 
+Route::get('admin/users', 'AdminController@userList');
+
 Route::post('/admin/login', [
     'uses' => 'AdminController@login',
     'as' => 'admin.login',
@@ -38,4 +40,9 @@ Route::get('/admin/logout', [
 Route::get('/admin/booking/{id}', [
     'uses' => 'AdminController@bookingDetail',
     'as'   => 'admin.booking.detail',
+]);
+
+Route::get('booking/status/update/{booking_id}/{status_id}/{screen}', [
+    'uses' => 'BookingController@statusUpdate',
+    'as'   => 'booking.status.update',
 ]);

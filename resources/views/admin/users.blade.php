@@ -9,7 +9,7 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">Bookings</h1>
+                            <h1 class="page-header">Users List</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -18,7 +18,7 @@
                         <div class="col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    Breif data for booking list
+                                    User List
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
@@ -26,32 +26,19 @@
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
                                                 <tr>
-                                                    <th>Booking id</th>
-                                                    <th>Booking status</th>
-                                                    <th>Booking User Name</th>
-                                                    <th>Boooking User email</th>
-                                                    <th>More</th>
-                                                    <th>Action</th>
+                                                    <th>User Id</th>
+                                                    <th>User Name</th>
+                                                    <th>User email</th>
+                                                    <th>Register Date</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                             @foreach ($bookings as $book)
+                                             @foreach ($users as $user)
                                               <tr class="odd gradeX">
-                                                <td>{{$book->booking_id}}</td>
-                                                <td>{{$book->booking_status}}</td>
-                                                <td>{{$book->booking_user_name}}</td>
-                                                <td>{{$book->booking_user_email}}</td>
-                                                <td><a href="{{route('admin.booking.detail',$book->booking_id)}}">Detail</a></td>
-                                                <td>
-                                                    @if($book->booking_status != 'Pending')<a href="{{url('booking/status/update/'.$book->booking_id.'/1/d')}}" class="btn btn-info" style="width:100px">Pending</a>
-                                                    @endif
-                                                    @if($book->booking_status != 'Reject')
-                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/2/d')}}" class="btn btn-danger" style="width:100px">Reject</a>
-                                                    @endif
-                                                    @if($book->booking_status != 'Confirm')
-                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/3/d')}}" class="btn btn-success" style="width:100px">Confirm</a>
-                                                    @endif
-                                                </td>
+                                                <td>{{$user->id}}</td>
+                                                <td>{{$user->name}}</td>
+                                                <td>{{$user->email}}</td>
+                                                <td>{{$user->created_at}}</td>
                                               </tr>
                                              @endforeach
                                             </tbody>
