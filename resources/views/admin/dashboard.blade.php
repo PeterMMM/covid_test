@@ -43,9 +43,14 @@
                                                 <td>{{$book->booking_user_email}}</td>
                                                 <td><a href="{{route('admin.booking.detail',$book->booking_id)}}">Detail</a></td>
                                                 <td>
-                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/1')}}" class="btn btn-info">Pending</a>
-                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/2')}}" class="btn btn-danger">Reject</a>
-                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/3')}}" class="btn btn-success">Confirm</a>
+                                                    @if($book->booking_status != 'Pending')<a href="{{url('booking/status/update/'.$book->booking_id.'/1/d')}}" class="btn btn-info" style="width:100px">Pending</a>
+                                                    @endif
+                                                    @if($book->booking_status != 'Reject')
+                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/2/d')}}" class="btn btn-danger" style="width:100px">Reject</a>
+                                                    @endif
+                                                    @if($book->booking_status != 'Confirm')
+                                                    <a href="{{url('booking/status/update/'.$book->booking_id.'/3/d')}}" class="btn btn-success" style="width:100px">Confirm</a>
+                                                    @endif
                                                 </td>
                                               </tr>
                                              @endforeach

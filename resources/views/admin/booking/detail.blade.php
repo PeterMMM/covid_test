@@ -17,8 +17,18 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    Detail information of submission.
+                                <div class="panel-heading" style="height: 50px;">
+                                    Detail
+                                    <span style="float:right">
+                                        @if($booking->booking_status != 'Pending')<a href="{{url('booking/status/update/'.$booking->booking_id.'/1/m')}}" class="btn btn-info" style="width:100px">Pending</a>
+                                        @endif
+                                        @if($booking->booking_status != 'Reject')
+                                        <a href="{{url('booking/status/update/'.$booking->booking_id.'/2/m')}}" class="btn btn-danger" style="width:100px">Reject</a>
+                                        @endif
+                                        @if($booking->booking_status != 'Confirm')
+                                        <a href="{{url('booking/status/update/'.$booking->booking_id.'/3/m')}}" class="btn btn-success" style="width:100px">Confirm</a>
+                                        @endif
+                                    </span>
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
