@@ -25,6 +25,8 @@ Route::get('admin', function () {
 
 Route::get('admin/dashboard', 'BookingController@bookingList');
 
+Route::get('admin/users', 'AdminController@userList');
+
 Route::post('/admin/login', [
     'uses' => 'AdminController@login',
     'as' => 'admin.login',

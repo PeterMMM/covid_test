@@ -153,7 +153,7 @@
                                 <a href="{{ url('admin/dashboard')}}" class="active"><i class="fa fa-table fa-fw"></i> Booking</a>
                             </li>
                             <li>
-                                <a href=""><i class="fa fa-user fa-fw"></i> Users</a>
+                                <a href="{{ url('admin/users')}}"><i class="fa fa-user fa-fw"></i> Users</a>
                             </li>
 <!--                             <li>
                                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>

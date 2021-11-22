@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Validator;
 use Session;
 use DB;
+use App\User;
 class AdminController extends Controller
 {
     public function login(Request $request)
@@ -31,6 +32,12 @@ class AdminController extends Controller
     {
         session()->forget('admin_login');
         return view('admin.login');
+    }
+
+    public function userList()
+    {
+        $users = User::where('type',0)->get();
+        return view('admin/users',['users'=>$users]);
     }
 
 
