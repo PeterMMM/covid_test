@@ -43,9 +43,18 @@ class BookingController extends Controller
         $status_id  = $status_id;
         $screen     = $screen;
         try {
-            $booking = Booking::find($booking_id);
+            $booking = Booking::select('bookings.*','fields.email')->leftJoin('fields','bookings.field_id','=','fields.id')->find($booking_id);
             $booking->status_id = $status_id;
             $booking->save();
+
+            if ($booking->status_id == 3) {
+                $details = [
+                    'title' => 'Mail from COVID TEST BOOKING service',
+                    'body'  => 'This is confirm message for booking date that you register.'
+                ];
+
+                \Mail::to($booking->email)->send(new \App\Mail\BookingReplyMail($details));
+            }
             if (isset($booking->id)) {
                 if ($screen == 'd') {
                     return redirect('admin/dashboard/');
