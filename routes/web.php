@@ -46,3 +46,20 @@ Route::get('booking/status/update/{booking_id}/{status_id}/{screen}', [
     'uses' => 'BookingController@statusUpdate',
     'as'   => 'booking.status.update',
 ]);
+
+Route::get('send-mail',function(){
+    $details = [
+        'title' => 'Mail from COVID TEST BOOKING service',
+        'body'  => 'This is confirm message for booking date that you register.'
+    ];
+
+    \Mail::to('minmg.peter@gmail.com')->send(new \App\Mail\BookingReplyMail($details));
+      // check for failures
+    dd("Email send.");
+    if (Mail::failures()) {
+        return response()->Fail('Sorry! Please try again latter');
+    }else{
+        return response()->success('Great! Successfully send in your mail');
+    }
+    dd("Email send.");
+});
